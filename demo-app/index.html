@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo App</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: 60px auto; padding: 0 20px; }
+    input { width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px 20px; background: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .success-message { color: green; margin-top: 16px; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <!-- <input id="username-input" placeholder="Username" type="text" /> -->
+  <input id="username-field" placeholder="Username" type="text" />
+  <input id="password-input" placeholder="Password" type="password" />
+  <!-- <button id="login-btn">Sign In</button> -->
+  <button id="login-button">Sign In</button>
+  <div id="success-banner">
+  <!-- <p class="success-message" id="welcome-msg">Welcome! You are logged in.</p> -->
+  <p class="success-message" id="success-banner">Welcome! You are logged in.</p>
+  <script>
+    document.getElementById('login-btn').addEventListener('click', () => {
+      const user = document.getElementById('username-input').value;
+      if (user) {
+        document.getElementById('welcome-msg').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
