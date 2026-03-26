@@ -10,5 +10,5 @@ test('user can log in successfully', async ({ page }) => {
   await page.locator('#password-input').fill('secret123');
   await page.locator('#login-btn').click();
 
-  await expect(page.locator('#success-banner')).toBeVisible();
+  await expect(page.locator('#welcome-msg')).toBeVisible();
 });
